@@ -1,7 +1,7 @@
 apiVersion: v2
 name: uptime-kuma
 description: A self-hosted Monitoring tool like Uptime-Robot.
-
+icon: https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg
 type: application
 
 home: https://github.com/sarab97/helms
