@@ -77,7 +77,15 @@ autoscaling:
 
 
 config:
-  enabled: true
+  enabled: false
+  data:
+    base-url: "https://example.com"
+    auth-file: "/var/cache/ntfy/user.db"
+    auth-default-access: "deny-all"
+    cache-file: "/var/cache/ntfy/cache.db"
+    attachment-cache-dir: "/var/cache/ntfy/attachments"
+    behind-proxy: true
+
 
 nodeSelector: {}
 

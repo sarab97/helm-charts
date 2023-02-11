@@ -33,6 +33,16 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args: ["serve"]
+          volumeMounts:
+            - mountPath: /var/cache/ntfy
+              name: {{ template "ntfy.name" . }}
+              {{- if .Values.config.enabled -}}
+            - mountPath: /etc/ntfy/server.yml
+              name: {{ template "ntfy.name" . }}-conf
+              subPath: server.yml
+              readOnly: true
+              {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
@@ -40,13 +50,26 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: 80
           readinessProbe:
             httpGet:
               path: /
-              port: http
+              port: 80
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        {{- if .Values.config.enabled -}}
+        - name: {{ template "ntfy.name" . }}-conf
+          configMap:
+            name: {{ template "ntfy.name" . }}
+        {{- end }}
+        - name: {{ template "ntfy.name" . }}
+{{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ template "ntfy.name" . }}
+{{- else }}
+          emptyDir: {}
+{{- end -}}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
