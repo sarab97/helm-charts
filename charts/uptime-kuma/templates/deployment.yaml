@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: 3001
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -47,6 +47,17 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /app/data
+              name: {{ template "uptime-kuma.name" . }}
+      volumes:
+        - name: {{ template "uptime-kuma.name" . }}
+          {{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ template "uptime-kuma.fullname" . }}
+          {{- else }}
+          emptyDir: {}
+          {{- end -}}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

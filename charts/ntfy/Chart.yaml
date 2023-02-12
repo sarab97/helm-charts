@@ -4,7 +4,7 @@ description: A self-hosted HTTP based pub sub notification service.
 icon: https://raw.githubusercontent.com/binwiederhier/ntfy/main/web/public/static/img/ntfy.png
 type: application
 
-home: https://github.com/sarab97/helms
+home: https://github.com/sarab97/helm-chart
 sources:
   - https://github.com/binwiederhier/ntfy
 

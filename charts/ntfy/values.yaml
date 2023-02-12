@@ -95,3 +95,4 @@ affinity: {}
 
 persistence:
   enabled: false
+  size: 200Mi
