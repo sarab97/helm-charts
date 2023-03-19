@@ -37,12 +37,12 @@ spec:
           volumeMounts:
             - mountPath: /var/cache/ntfy
               name: {{ template "ntfy.name" . }}
-              {{- if .Values.config.enabled -}}
+            {{- if .Values.config.enabled }}
             - mountPath: /etc/ntfy/server.yml
               name: {{ template "ntfy.name" . }}-conf
               subPath: server.yml
               readOnly: true
-              {{- end }}
+            {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
@@ -58,7 +58,7 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
-        {{- if .Values.config.enabled -}}
+        {{- if .Values.config.enabled }}
         - name: {{ template "ntfy.name" . }}-conf
           configMap:
             name: {{ template "ntfy.name" . }}
