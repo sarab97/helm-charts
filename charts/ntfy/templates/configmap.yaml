@@ -6,7 +6,7 @@ metadata:
 data:
   server.yml: |
     {{- range $key, $value := .Values.config.data }}
-      {{ $key }}: {{ $value | quote }}
+      {{ $key }}: {{ $value }}
     {{- end }}
 
 {{- end }}

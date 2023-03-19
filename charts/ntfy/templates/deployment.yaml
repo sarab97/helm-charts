@@ -47,13 +47,16 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+            - name: metrics
+              containerPort: 9090
+              protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /v1/health
               port: 80
           readinessProbe:
             httpGet:
-              path: /
+              path: /v1/health
               port: 80
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
