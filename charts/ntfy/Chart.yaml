@@ -15,6 +15,6 @@ keywords:
   - pubsub
   - notification
 
-version: 0.1.0
+version: 0.1.1
 
-appVersion: "v1.30.1"
+appVersion: "v1.31.0"
