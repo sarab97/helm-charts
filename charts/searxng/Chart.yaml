@@ -1,0 +1,19 @@
+apiVersion: v2
+name: searxng
+description: A self-hosted meta search engine with focus on privacy.
+icon: https://raw.githubusercontent.com/searxng/searxng/master/src/brand/searxng-wordmark.svg
+type: application
+
+home: https://github.com/sarab97/helm-chart
+sources:
+  - https://github.com/searxng/searxng
+
+maintainers:
+  - name: Sarab Singh
+
+keywords:
+  - search
+
+version: 0.1.0
+
+appVersion: "latest"
