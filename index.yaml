@@ -76,6 +76,25 @@ entries:
     urls:
     - https://github.com/sarab97/helm-charts/releases/download/ntfy-0.1.0/ntfy-0.1.0.tgz
     version: 0.1.0
+  searxng:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2023-03-22T14:45:57.048315128Z"
+    description: A self-hosted meta search engine with focus on privacy.
+    digest: 42c3ab51a6560c3e18c6f0d284b3cc18e957c4fa6623aed02dc2b4da1949c402
+    home: https://github.com/sarab97/helm-chart
+    icon: https://raw.githubusercontent.com/searxng/searxng/master/src/brand/searxng-wordmark.svg
+    keywords:
+    - search
+    maintainers:
+    - name: Sarab Singh
+    name: searxng
+    sources:
+    - https://github.com/searxng/searxng
+    type: application
+    urls:
+    - https://github.com/sarab97/helm-charts/releases/download/searxng-0.1.0/searxng-0.1.0.tgz
+    version: 0.1.0
   uptime-kuma:
   - apiVersion: v2
     appVersion: 1.21.0
@@ -116,4 +135,4 @@ entries:
     urls:
     - https://github.com/sarab97/helm-charts/releases/download/uptime-kuma-0.1.0/uptime-kuma-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-21T19:17:40.406508743Z"
+generated: "2023-03-22T14:45:57.21945119Z"
