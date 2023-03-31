@@ -2,6 +2,25 @@ apiVersion: v1
 entries:
   ntfy:
   - apiVersion: v2
+    appVersion: v2.3.1
+    created: "2023-03-31T05:26:56.990677392Z"
+    description: A self-hosted HTTP based pub sub notification service.
+    digest: d3f5e261925519aa40b14b9d7306df9cc6631a265f2524157919dd1e1f6071d0
+    home: https://github.com/sarab97/helm-chart
+    icon: https://raw.githubusercontent.com/binwiederhier/ntfy/main/web/public/static/img/ntfy.png
+    keywords:
+    - pubsub
+    - notification
+    maintainers:
+    - name: Sarab Singh
+    name: ntfy
+    sources:
+    - https://github.com/binwiederhier/ntfy
+    type: application
+    urls:
+    - https://github.com/sarab97/helm-charts/releases/download/ntfy-0.1.4/ntfy-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: v2.2.0
     created: "2023-03-19T20:22:18.825007231Z"
     description: A self-hosted HTTP based pub sub notification service.
@@ -135,4 +154,4 @@ entries:
     urls:
     - https://github.com/sarab97/helm-charts/releases/download/uptime-kuma-0.1.0/uptime-kuma-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-22T14:45:57.21945119Z"
+generated: "2023-03-31T05:26:56.990696992Z"
