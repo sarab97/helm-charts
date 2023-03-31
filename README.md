@@ -6,6 +6,7 @@
 ## Charts
 - [ntfy](https://github.com/sarab97/helm-charts/tree/main/charts/ntfy)
 - [uptime-kuma](https://github.com/sarab97/helm-charts/tree/main/charts/uptime-kuma)
+- [searx-ng](https://github.com/sarab97/helm-charts/tree/main/charts/searx-ng)
 
 
 ## Usage
