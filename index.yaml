@@ -135,6 +135,26 @@ entries:
     version: 0.1.0
   uptime-kuma:
   - apiVersion: v2
+    appVersion: 1.21.3
+    created: "2023-05-17T13:26:23.993563111Z"
+    description: A self-hosted Monitoring tool like Uptime-Robot.
+    digest: b79ecbcb1b05c783c5e28f9d37c0664811a9212df6e10b35a19bb4daee683951
+    home: https://github.com/sarab97/helm-charts
+    icon: https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg
+    keywords:
+    - uptime
+    - uptime-kuma
+    - monitoring
+    maintainers:
+    - name: Sarab Singh
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/sarab97/helm-charts/releases/download/uptime-kuma-0.1.4/uptime-kuma-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 1.21.2
     created: "2023-04-03T19:57:42.020152013Z"
     description: A self-hosted Monitoring tool like Uptime-Robot.
@@ -213,4 +233,4 @@ entries:
     urls:
     - https://github.com/sarab97/helm-charts/releases/download/uptime-kuma-0.1.0/uptime-kuma-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-26T18:08:13.520737697Z"
+generated: "2023-05-17T13:26:23.993621512Z"
