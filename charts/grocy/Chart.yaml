@@ -1,0 +1,21 @@
+apiVersion: v2
+name: grocy
+description: grocy is a web-based self-hosted groceries & household management solution for your home
+icon: https://raw.githubusercontent.com/grocy/grocy/master/public/img/icon.svg
+type: application
+
+
+home: https://github.com/sarab97/helm-chart
+sources:
+  - https://github.com/grocy/grocy
+
+maintainers:
+  - name: Sarab Singh
+
+keywords:
+  - erp
+  - home
+
+version: 0.1.0
+
+appVersion: "3.3.2"
