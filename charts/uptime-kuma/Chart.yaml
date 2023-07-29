@@ -16,6 +16,6 @@ keywords:
   - uptime-kuma
   - monitoring
 
-version: 0.1.4
+version: 0.1.5
 
-appVersion: "1.21.3"
+appVersion: "1.22.1"
